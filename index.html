@@ -6,71 +6,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Civil War Spy Survival Guide</title>
   <style>
-    /* Basic CSS reset */
+    /* ============= GLOBAL RESETS & BASIC STYLES ============= */
+    html {
+      scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+    }
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      background-color: beige; /* (1) Website background color */
     }
-    header, nav, section, footer {
+
+    /* ============= HEADER ============= */
+    header {
+      text-align: center;
       padding: 1rem;
       max-width: 800px;
       margin: 0 auto;
     }
     header h1 {
-      text-align: center;
       margin-bottom: 0.5rem;
     }
+    /* (2) Center text for project info */
+    .un-essay {
+      margin: 0; 
+    }
+    .author-name {
+      margin: 0.5rem 0 0 0;
+      font-style: italic;
+    }
+
+    /* ============= NAVIGATION (STICKY) ============= */
     nav {
-      text-align: center;
-      margin-bottom: 1rem;
+      position: sticky; /* (3) Stick to the top of the page on scroll */
+      top: 0;
+      background-color: #fdfdfd;
+      z-index: 9999;
+      border-bottom: 1px solid #ccc;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav li {
+      margin: 0;
     }
     nav a {
-      margin: 0 0.5rem;
+      display: inline-block;
+      padding: 1rem;
       text-decoration: none;
       color: #0066cc;
     }
-    h2 {
+    nav a:hover {
+      background-color: #eee;
+    }
+
+    /* ============= SECTION ============= */
+    section {
+      padding: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* (6) Center each section heading above a thin border line */
+    section h2 {
+      text-align: center;
       margin-top: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.3rem;
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #666;
-    }
 
-    .footnote {
+
+    .image-placeholder {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      text-align: center;
+    }
+    .image-caption {
       font-size: 0.9rem;
       color: #333;
-      margin-bottom: 1rem;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* ============= FOOTER ============= */
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #666;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+    }
+    .footnote {
+      font-size: 0.85rem;
+      color: #333;
+      margin-top: 1.5rem;
       line-height: 1.4;
+      text-align: left;
     }
   </style>
 </head>
 <body>
+
+  <!-- ============= HEADER ============= -->
   <header>
     <h1>The Civil War Spy’s Survival Guide</h1>
-    <p>An Un-Essay Project by Mukul Sauhta</p>
+    <p class="un-essay">An Un-Essay Project</p>
+    <p class="author-name">By Mukul Sauhta</p>
   </header>
 
+  <!-- ============= NAV ============= -->
   <nav>
-    <a href="#introduction">Introduction</a> |
-    <a href="#espionage">Espionage in the Civil War</a> |
-    <a href="#disguises">Disguises & Mannerisms</a> |
-    <a href="#intelligence">Gathering Intelligence</a> |
-    <a href="#codes">Codes & Ciphers</a> |
-    <a href="#survival">Surviving Behind Enemy Lines</a> |
-    <a href="#notables">Notable Spies</a> |
-    <a href="#conclusion">Conclusion</a>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#espionage">Espionage</a></li>
+      <li><a href="#disguises">Disguises</a></li>
+      <li><a href="#intelligence">Intelligence</a></li>
+      <li><a href="#codes">Codes</a></li>
+      <li><a href="#survival">Survival</a></li>
+      <li><a href="#notables">Notable Spies</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
   </nav>
 
+  <!-- ============= INTRODUCTION SECTION ============= -->
   <section id="introduction">
     <h2>1. Introduction</h2>
+
+    <!-- <img src="path-to--image.jpg" alt="Civil War Image" class="image-placeholder">
+    <p class="image-caption">Example caption describing this image.</p> -->
     <p>
       Welcome to the <em>Civil War Spy’s Survival Guide</em>, a resource designed to help operatives
       working behind enemy lines during the American Civil War. Drawing on both Union and Confederate
@@ -79,8 +152,11 @@
     </p>
   </section>
 
+  <!-- ============= UNDERSTANDING ESPIONAGE SECTION ============= -->
   <section id="espionage">
     <h2>2. Understanding Espionage in the Civil War</h2>
+    <!-- <img src="path-to-your-image.jpg" alt="Espionage Tactics" class="image-placeholder">
+    <p class="image-caption">A historically relevant image or map illustrating espionage tactics.</p> -->
     <p>
       The Civil War (1861–1865) turned friend against friend and neighbor against neighbor. Spies had to
       operate carefully across divided states, sifting through rumors, forging secret alliances, and
@@ -95,8 +171,12 @@
     </p>
   </section>
 
+  <!-- ============= DISGUISES SECTION ============= -->
   <section id="disguises">
     <h2>3. Disguises and Mannerisms</h2>
+    <!-- (5) Placeholder for an image relevant to disguises -->
+    <!-- <img src="path-to-your-image.jpg" alt="Disguises" class="image-placeholder">
+    <p class="image-caption">Depicting period clothing or props spies might have used.</p> -->
     <ul>
       <li><strong>Dress the Part:</strong> Clothing is your first line of defense. Wear local styles to blend in.</li>
       <li><strong>Adopt Local Speech Patterns:</strong> Subtle dialect differences can be a giveaway.</li>
@@ -107,8 +187,12 @@
     </p>
   </section>
 
+  <!-- ============= GATHERING INTELLIGENCE SECTION ============= -->
   <section id="intelligence">
     <h2>4. Gathering Intelligence</h2>
+    <!-- (5) Placeholder for an image relevant to intelligence gathering -->
+    <!-- <img src="path-to-your-image.jpg" alt="Gathering Intel" class="image-placeholder">
+    <p class="image-caption">Possibly a map, a telegraph station, or a meeting place in the 1860s.</p> -->
     <ul>
       <li><strong>Networking:</strong> Loyal shopkeepers, barmaids, or farmhands can overhear crucial intel.</li>
       <li><strong>Observation:</strong> Pay attention to the comings and goings of supply wagons or troop trains.</li>
@@ -117,8 +201,12 @@
     <p>Record details on troop movements, leadership changes, or supply routes, and send them back via coded letters or trusted couriers.</p>
   </section>
 
+  <!-- ============= CODES & CIPHERS SECTION ============= -->
   <section id="codes">
     <h2>5. Codes and Ciphers</h2>
+    <!-- (5) Placeholder for an image relevant to ciphers or codebooks -->
+    <!-- <img src="path-to-your-image.jpg" alt="Codes and Ciphers" class="image-placeholder">
+    <p class="image-caption">An example of a cipher wheel or coded Civil War-era letter.</p> -->
     <p>
       Communication was a major hurdle. Written letters could be intercepted, making coded messages vital.
     </p>
@@ -129,8 +217,12 @@
     </ul>
   </section>
 
+  <!-- ============= SURVIVING SECTION ============= -->
   <section id="survival">
     <h2>6. Surviving Behind Enemy Lines</h2>
+    <!-- (5) Placeholder for an image relevant to survival strategies -->
+    <!-- <img src="path-to-your-image.jpg" alt="Survival" class="image-placeholder">
+    <p class="image-caption">Perhaps a safe house or a hidden room concept in the 1860s.</p> -->
     <ul>
       <li><strong>Blend In:</strong> Keep your actions natural, belongings minimal, and backstory consistent.</li>
       <li><strong>Safe Houses:</strong> Know sympathetic locals or secluded spots for emergency hiding.</li>
@@ -138,8 +230,14 @@
     </ul>
   </section>
 
+  <!-- ============= NOTABLE SPIES SECTION ============= -->
   <section id="notables">
     <h2>7. Notable Spies and Their Strategies</h2>
+    <!-- (5) Placeholder for images of Elizabeth Van Lew, Pauline Cushman, or Belle Boyd -->
+    <!-- Example 1: 
+    <img src="path-to-your-image.jpg" alt="Elizabeth Van Lew" class="image-placeholder">
+    <p class="image-caption">Elizabeth Van Lew</p>
+    -->
     <ol>
       <li>
         <strong>Elizabeth Van Lew (Union):</strong> A Richmond socialite who ran a major spy ring
@@ -156,8 +254,12 @@
     </ol>
   </section>
 
+  <!-- ============= CONCLUSION SECTION ============= -->
   <section id="conclusion">
     <h2>8. Conclusion</h2>
+    <!-- (5) Placeholder for a final evocative Civil War image -->
+    <!-- <img src="path-to-your-image.jpg" alt="Conclusion" class="image-placeholder">
+    <p class="image-caption">Maybe a Civil War battlefield or a photograph representing unity.</p> -->
     <p>
       Civil War espionage demanded creativity, courage, and adaptability. Whether you’re slipping
       across enemy lines as a merchant or organizing networks in an occupied city, keep your wits
@@ -165,13 +267,13 @@
     </p>
   </section>
 
+  <!-- ============= FOOTER ============= -->
   <footer>
-    <p>
-      &copy; 2025, Mukul Sauhta | Created for HI 253 Final Project <br>
-      Published via GitHub Pages
-    </p>
+    <p>&copy; 2025, Mukul Sauhta | Created for HIS 253 Final Project</p>
+    <p>Published via GitHub Pages</p>
+
     <div class="footnote">
-      <p><strong>Footnotes (Chicago Style):</strong></p>
+      <strong>Footnotes (Chicago Style):</strong>
       <p>
         1. U.S. War Department, <em>The War of the Rebellion: A Compilation of the Official 
         Records of the Union and Confederate Armies</em>, Series II (Washington, D.C.: Government 
@@ -187,5 +289,6 @@
       </p>
     </div>
   </footer>
+
 </body>
 </html>
