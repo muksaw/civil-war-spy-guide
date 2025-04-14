@@ -1,2 +1,2 @@
 # civil-war-spy-guide
-Project for HI 253, spy guide on website using github pages.
+To view the project, simply just visit the link: [https://muksaw.github.io/civil-war-spy-guide/](https://muksaw.github.io/civil-war-spy-guide/)
