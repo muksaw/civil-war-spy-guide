@@ -29,7 +29,7 @@
       margin-bottom: 0.5rem;
     }
     .un-essay {
-      margin: 0; 
+      margin: 0;
     }
     .author-name {
       margin: 0.5rem 0 0 0;
@@ -53,12 +53,12 @@
     }
     nav li {
       margin: 0;
-      /* Add a vertical divider after each list item except the last */
     }
+    /* Divider for nav links */
     nav li:not(:last-child)::after {
       content: "|";
       margin: 0 0.5rem;
-      color: #0066cc; /* Divider color */
+      color: #0066cc;
     }
     nav a {
       display: inline-block;
@@ -84,12 +84,33 @@
       padding-bottom: 0.3rem;
     }
 
-    .image-placeholder {
-      display: block;
-      margin: 1rem auto;
-      max-width: 100%;
-      text-align: center;
+    /* ============= THREE-COLUMN LAYOUT ============= */
+    .three-column-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem; /* space between columns */
+      margin-top: 1rem;
     }
+    .column {
+      flex: 1;               /* Each column takes up equal width */
+      text-align: center;    /* Center images and headings if desired */
+    }
+    .column img {
+      width: 80%;            /* You can adjust to 100% or another value */
+      max-width: 200px;      /* Limit max width if you prefer smaller images */
+      margin: 0 auto;        /* Center the image horizontally */
+      display: block;
+    }
+    .column p {
+      margin-top: 0.5rem;
+      text-align: left;      /* If you want the bullet text itself left-aligned */
+    }
+
+    .image-placeholder {
+      /* additional styling if needed */
+    }
+
     .image-caption {
       font-size: 0.9rem;
       color: #333;
@@ -141,29 +162,26 @@
     </ul>
   </nav>
 
-  <!-- ============= INTRODUCTION SECTION ============= -->
+  <!-- ============= INTRODUCTION SECTION (1) ============= -->
   <section id="introduction">
     <h2>1. Introduction</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Civil War Image" class="image-placeholder">
-    <p class="image-caption">Example caption describing this image.</p> -->
     <p>
-      Welcome to The <em>Civil War Spy’s Survival Guide</em>, a resource designed to help operatives
+      Welcome to the <em>Civil War Spy’s Survival Guide</em>, a resource designed to help operatives
       working behind enemy lines during the American Civil War. Drawing on both Union and Confederate
       perspectives, this guide highlights essential espionage techniques, from disguises to secret
       codes, as well as best practices for survival.
     </p>
   </section>
 
-  <!-- ============= UNDERSTANDING ESPIONAGE SECTION ============= -->
+  <!-- ============= UNDERSTANDING ESPIONAGE SECTION (2) ============= -->
   <section id="espionage">
     <h2>2. Understanding Espionage in the Civil War</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Espionage Tactics" class="image-placeholder">
-    <p class="image-caption">A historically relevant image or map illustrating espionage tactics.</p> -->
     <p>
       The Civil War (1861–1865) turned friend against friend and neighbor against neighbor. Spies had to
       operate carefully across divided states, sifting through rumors, forging secret alliances, and
       sharing intelligence that could change the tide of battle. Espionage took many forms, some spies hid
-      in plain sight as traveling salesmen, while others performed coded letter exchanges or telegraph intercepts.<sup>1</sup>
+      in plain sight as traveling salesmen, while others performed coded letter exchanges or telegraph
+      intercepts.<sup>1</sup>
     </p>
     <p>
       Spying in the Civil War was extremely dangerous. Captured spies could be executed, imprisoned, or
@@ -173,91 +191,172 @@
     </p>
   </section>
 
-  <!-- ============= DISGUISES SECTION ============= -->
+  <!-- ============= DISGUISES SECTION (3) ============= -->
   <section id="disguises">
     <h2>3. Disguises and Mannerisms</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Disguises" class="image-placeholder">
-    <p class="image-caption">Depicting period clothing or props spies might have used.</p> -->
-    <ul>
-      <li><strong>Dress the Part:</strong> Clothing is your first line of defense. Wear local styles to blend in.</li>
-      <li><strong>Adopt Local Speech Patterns:</strong> Subtle dialect differences can be a giveaway.</li>
-      <li><strong>Social Cues:</strong> Observe local norms and carry props that match your cover story (e.g., traveling merchant).</li>
-    </ul>
+    <div class="three-column-section">
+      <div class="column">
+        <!-- Placeholder Image (Left) -->
+        <img src="path-to--left-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Dress the Part:</strong> Clothing is your first line of defense. 
+          Wear local styles to blend in.
+        </p>
+      </div>
+      <div class="column">
+        <!-- Placeholder Image (Center) -->
+        <img src="path-to--center-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Adopt Local Speech Patterns:</strong> Subtle dialect differences 
+          can be a giveaway.
+        </p>
+      </div>
+      <div class="column">
+        <!-- Placeholder Image (Right) -->
+        <img src="path-to--right-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Social Cues:</strong> Observe local norms and carry props that 
+          match your cover story (e.g., traveling merchant).
+        </p>
+      </div>
+    </div>
     <p>
-      <em>Pro-Tip:</em> Women spies often found it easier to cross picket lines due to assumptions of the era. For example, Union spy Pauline Cushman leveraged her theatrical background to gather information.<sup>2</sup>
+      <em>Pro-Tip:</em> Women spies often found it easier to cross picket lines 
+      due to assumptions of the era. For example, Union spy Pauline Cushman 
+      leveraged her theatrical background to gather information.<sup>2</sup>
     </p>
   </section>
 
-  <!-- ============= GATHERING INTELLIGENCE SECTION ============= -->
+  <!-- ============= GATHERING INTELLIGENCE SECTION (4) ============= -->
   <section id="intelligence">
     <h2>4. Gathering Intelligence</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Gathering Intel" class="image-placeholder">
-    <p class="image-caption">Possibly a map, a telegraph station, or a meeting place in the 1860s.</p> -->
-    <ul>
-      <li><strong>Networking:</strong> Loyal shopkeepers, barmaids, or farmhands can overhear crucial intel.</li>
-      <li><strong>Observation:</strong> Pay attention to the comings and goings of supply wagons or troop trains.</li>
-      <li><strong>Listening Posts:</strong> Cafés or taverns near garrisons are prime spots to overhear soldiers.</li>
-    </ul>
-    <p>Record details on troop movements, leadership changes, or supply routes, and send them back via coded letters or trusted couriers.</p>
+    <div class="three-column-section">
+      <div class="column">
+        <img src="path-to--left-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Networking:</strong> Loyal shopkeepers, barmaids, or farmhands 
+          can overhear crucial intel.
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to--center-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Observation:</strong> Pay attention to the comings and goings of 
+          supply wagons or troop trains.
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to-right-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Listening Posts:</strong> Cafés or taverns near garrisons are prime 
+          spots to overhear soldiers.
+        </p>
+      </div>
+    </div>
+    <p>
+      Record details on troop movements, leadership changes, or supply routes, and 
+      send them back via coded letters or trusted couriers.
+    </p>
   </section>
 
-  <!-- ============= CODES & CIPHERS SECTION ============= -->
+  <!-- ============= CODES & CIPHERS SECTION (5) ============= -->
   <section id="codes">
     <h2>5. Codes and Ciphers</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Codes and Ciphers" class="image-placeholder">
-    <p class="image-caption">An example of a cipher wheel or coded Civil War-era letter.</p> -->
+    <div class="three-column-section">
+      <div class="column">
+        <img src="path-to-left-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Simple Substitution Ciphers:</strong> Replace each letter with a 
+          different letter or symbol.
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to-center-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Book Codes:</strong> Common texts like the Bible used as reference 
+          for page/line/word numbers.
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to-right-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Invisible Ink:</strong> Lemon juice or mild acids to write between 
+          lines, revealed by heat.
+        </p>
+      </div>
+    </div>
     <p>
-      Communication was a major hurdle. Written letters could be intercepted, making coded messages vital.
+      Communication was a major hurdle. Written letters could be intercepted, 
+      making coded messages vital.
     </p>
-    <ul>
-      <li><strong>Simple Substitution Ciphers:</strong> Replace each letter with a different letter/symbol.</li>
-      <li><strong>Book Codes:</strong> Common texts like the Bible used as reference for page/line/word numbers.</li>
-      <li><strong>Invisible Ink:</strong> Lemon juice or mild acids to write between lines, revealed by heat.</li>
-    </ul>
   </section>
 
-  <!-- ============= SURVIVING SECTION ============= -->
+  <!-- ============= SURVIVING SECTION (6) ============= -->
   <section id="survival">
     <h2>6. Surviving Behind Enemy Lines</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Survival" class="image-placeholder">
-    <p class="image-caption">Perhaps a safe house or a hidden room concept in the 1860s.</p> -->
-    <ul>
-      <li><strong>Blend In:</strong> Keep your actions natural, belongings minimal, and backstory consistent.</li>
-      <li><strong>Safe Houses:</strong> Know sympathetic locals or secluded spots for emergency hiding.</li>
-      <li><strong>Travel Light:</strong> Avoid carrying incriminating documents or identifiable uniform items.</li>
-    </ul>
+    <div class="three-column-section">
+      <div class="column">
+        <img src="path-to-your-left-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Blend In:</strong> Keep your actions natural, belongings minimal, 
+          and backstory consistent.
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to-your-center-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Safe Houses:</strong> Know sympathetic locals or secluded spots 
+          for emergency hiding.
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to-your-right-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Travel Light:</strong> Avoid carrying incriminating documents or 
+          identifiable uniform items.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <!-- ============= NOTABLE SPIES SECTION ============= -->
+  <!-- ============= NOTABLE SPIES SECTION (7) ============= -->
   <section id="notables">
     <h2>7. Notable Spies and Their Strategies</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Elizabeth Van Lew" class="image-placeholder">
-    <p class="image-caption">Elizabeth Van Lew</p> -->
-    <ol>
-      <li>
-        <strong>Elizabeth Van Lew (Union):</strong> A Richmond socialite who ran a major spy ring
-        beneath Confederate noses by enlisting a broad network of informants.<sup>3</sup>
-      </li>
-      <li>
-        <strong>Pauline Cushman (Union):</strong> An actress turned spy, Cushman feigned Confederate
-        support while relaying vital intelligence to the North.<sup>2</sup>
-      </li>
-      <li>
-        <strong>Belle Boyd (Confederate):</strong> Dubbed the “Cleopatra of the Secession,” she used
-        her charm to extract secrets from Union officers.
-      </li>
-    </ol>
+    <div class="three-column-section">
+      <div class="column">
+        <img src="path-to-your-left-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Elizabeth Van Lew (Union):</strong> A Richmond socialite who ran 
+          a major spy ring beneath Confederate noses by enlisting a network of 
+          informants.<sup>3</sup>
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to-your-center-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Pauline Cushman (Union):</strong> An actress turned spy, she 
+          feigned Confederate support while relaying vital intelligence to 
+          the North.<sup>2</sup>
+        </p>
+      </div>
+      <div class="column">
+        <img src="path-to-your-right-image.jpg" alt="Placeholder" class="image-placeholder">
+        <p>
+          <strong>Belle Boyd (Confederate):</strong> Dubbed the “Cleopatra of 
+          the Secession,” she used her charm to extract secrets from Union officers.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <!-- ============= CONCLUSION SECTION ============= -->
+  <!-- ============= CONCLUSION SECTION (8) ============= -->
   <section id="conclusion">
     <h2>8. Conclusion</h2>
-    <!-- <img src="path-to-your-image.jpg" alt="Conclusion" class="image-placeholder">
-    <p class="image-caption">Maybe a Civil War battlefield or a photograph representing unity.</p> -->
     <p>
-      Civil War espionage demanded creativity, courage, and adaptability. Whether you’re slipping
-      across enemy lines as a merchant or organizing networks in an occupied city, keep your wits
-      about you. The intelligence you gather may well change the course of history and save your life.
+      Civil War espionage demanded creativity, courage, and adaptability. Whether 
+      you’re slipping across enemy lines as a merchant or organizing networks in 
+      an occupied city, keep your wits about you. The intelligence you gather may 
+      well change the course of history, and save your life.
     </p>
   </section>
 
