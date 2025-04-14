@@ -15,7 +15,7 @@
       padding: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: beige; /* (1) Website background color */
+      background-color: beige; /* Website background color */
     }
 
     /* ============= HEADER ============= */
@@ -28,7 +28,6 @@
     header h1 {
       margin-bottom: 0.5rem;
     }
-    /* (2) Center text for project info */
     .un-essay {
       margin: 0; 
     }
@@ -39,9 +38,9 @@
 
     /* ============= NAVIGATION (STICKY) ============= */
     nav {
-      position: sticky; /* (3) Stick to the top of the page on scroll */
+      position: sticky; /* Sticks to the top of the page on scroll */
       top: 0;
-      background-color: #fdfdfd;
+      background-color: beige; /* Make the nav background beige */
       z-index: 9999;
       border-bottom: 1px solid #ccc;
     }
@@ -54,6 +53,12 @@
     }
     nav li {
       margin: 0;
+      /* Add a vertical divider after each list item except the last */
+    }
+    nav li:not(:last-child)::after {
+      content: "|";
+      margin: 0 0.5rem;
+      color: #0066cc; /* Divider color */
     }
     nav a {
       display: inline-block;
@@ -71,7 +76,6 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    /* (6) Center each section heading above a thin border line */
     section h2 {
       text-align: center;
       margin-top: 2rem;
@@ -79,7 +83,6 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.3rem;
     }
-
 
     .image-placeholder {
       display: block;
@@ -141,8 +144,7 @@
   <!-- ============= INTRODUCTION SECTION ============= -->
   <section id="introduction">
     <h2>1. Introduction</h2>
-
-    <!-- <img src="path-to--image.jpg" alt="Civil War Image" class="image-placeholder">
+    <!-- <img src="path-to-your-image.jpg" alt="Civil War Image" class="image-placeholder">
     <p class="image-caption">Example caption describing this image.</p> -->
     <p>
       Welcome to the <em>Civil War Spy’s Survival Guide</em>, a resource designed to help operatives
@@ -174,7 +176,6 @@
   <!-- ============= DISGUISES SECTION ============= -->
   <section id="disguises">
     <h2>3. Disguises and Mannerisms</h2>
-    <!-- (5) Placeholder for an image relevant to disguises -->
     <!-- <img src="path-to-your-image.jpg" alt="Disguises" class="image-placeholder">
     <p class="image-caption">Depicting period clothing or props spies might have used.</p> -->
     <ul>
@@ -190,7 +191,6 @@
   <!-- ============= GATHERING INTELLIGENCE SECTION ============= -->
   <section id="intelligence">
     <h2>4. Gathering Intelligence</h2>
-    <!-- (5) Placeholder for an image relevant to intelligence gathering -->
     <!-- <img src="path-to-your-image.jpg" alt="Gathering Intel" class="image-placeholder">
     <p class="image-caption">Possibly a map, a telegraph station, or a meeting place in the 1860s.</p> -->
     <ul>
@@ -204,7 +204,6 @@
   <!-- ============= CODES & CIPHERS SECTION ============= -->
   <section id="codes">
     <h2>5. Codes and Ciphers</h2>
-    <!-- (5) Placeholder for an image relevant to ciphers or codebooks -->
     <!-- <img src="path-to-your-image.jpg" alt="Codes and Ciphers" class="image-placeholder">
     <p class="image-caption">An example of a cipher wheel or coded Civil War-era letter.</p> -->
     <p>
@@ -220,7 +219,6 @@
   <!-- ============= SURVIVING SECTION ============= -->
   <section id="survival">
     <h2>6. Surviving Behind Enemy Lines</h2>
-    <!-- (5) Placeholder for an image relevant to survival strategies -->
     <!-- <img src="path-to-your-image.jpg" alt="Survival" class="image-placeholder">
     <p class="image-caption">Perhaps a safe house or a hidden room concept in the 1860s.</p> -->
     <ul>
@@ -233,11 +231,8 @@
   <!-- ============= NOTABLE SPIES SECTION ============= -->
   <section id="notables">
     <h2>7. Notable Spies and Their Strategies</h2>
-    <!-- (5) Placeholder for images of Elizabeth Van Lew, Pauline Cushman, or Belle Boyd -->
-    <!-- Example 1: 
-    <img src="path-to-your-image.jpg" alt="Elizabeth Van Lew" class="image-placeholder">
-    <p class="image-caption">Elizabeth Van Lew</p>
-    -->
+    <!-- <img src="path-to-your-image.jpg" alt="Elizabeth Van Lew" class="image-placeholder">
+    <p class="image-caption">Elizabeth Van Lew</p> -->
     <ol>
       <li>
         <strong>Elizabeth Van Lew (Union):</strong> A Richmond socialite who ran a major spy ring
@@ -257,7 +252,6 @@
   <!-- ============= CONCLUSION SECTION ============= -->
   <section id="conclusion">
     <h2>8. Conclusion</h2>
-    <!-- (5) Placeholder for a final evocative Civil War image -->
     <!-- <img src="path-to-your-image.jpg" alt="Conclusion" class="image-placeholder">
     <p class="image-caption">Maybe a Civil War battlefield or a photograph representing unity.</p> -->
     <p>
