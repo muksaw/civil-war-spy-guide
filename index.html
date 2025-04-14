@@ -95,16 +95,24 @@
     .column {
       flex: 1;               /* Each column takes up equal width */
       text-align: center;    /* Center images and headings if desired */
+      display: flex;
+      flex-direction: column;
+    }
+    .image-container {
+      height: 300px;         /* Fixed height for image container */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;   /* Space between image and text */
     }
     .column img {
-      width: 80%;            /* You can adjust to 100% or another value */
-      max-width: 200px;      /* Limit max width if you prefer smaller images */
-      margin: 0 auto;        /* Center the image horizontally */
-      display: block;
+      max-width: 100%;       /* Image won't exceed container width */
+      max-height: 100%;      /* Image won't exceed container height */
+      object-fit: contain;   /* Maintain aspect ratio */
     }
     .column p {
       margin-top: 0.5rem;
-      text-align: left;      /* If you want the bullet text itself left-aligned */
+      text-align: left;      /* Left-align the bullet text */
     }
 
     .image-placeholder {
@@ -197,21 +205,27 @@
     <h2>3. Disguises and Mannerisms</h2>
     <div class="three-column-section">
       <div class="column">
-        <img src="images/section3_image1.jpg" alt="Civil War Era Disguise Techniques" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section3_image1.jpeg" alt="Civil War Era Disguise Techniques">
+        </div>
         <p>
           <strong>Dress the Part:</strong> Clothing is your first line of defense. 
           Wear local styles to blend in.
         </p>
       </div>
       <div class="column">
-        <img src="images/section3_image2.jpg" alt="Civil War Era Speech Patterns" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section3_image2.jpg" alt="Civil War Era Speech Patterns">
+        </div>
         <p>
           <strong>Adopt Local Speech Patterns:</strong> Subtle dialect differences 
           can be a giveaway.
         </p>
       </div>
       <div class="column">
-        <img src="images/section3_image3.jpg" alt="Civil War Era Social Cues" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section3_image3.jpg" alt="Civil War Era Social Cues">
+        </div>
         <p>
           <strong>Social Cues:</strong> Observe local norms and carry props that 
           match your cover story (e.g., traveling merchant).
@@ -259,21 +273,27 @@
     <h2>5. Codes and Ciphers</h2>
     <div class="three-column-section">
       <div class="column">
-        <img src="images/section5_image1.jpg" alt="Civil War Era Cipher Methods" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section5_image1.jpg" alt="Civil War Era Cipher Methods">
+        </div>
         <p>
           <strong>Simple Substitution Ciphers:</strong> Replace each letter with a 
           different letter or symbol.
         </p>
       </div>
       <div class="column">
-        <img src="images/section5_image2.jpg" alt="Civil War Era Book Codes" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section5_image2.jpg" alt="Civil War Era Book Codes">
+        </div>
         <p>
           <strong>Book Codes:</strong> Common texts like the Bible used as reference 
           for page/line/word numbers.
         </p>
       </div>
       <div class="column">
-        <img src="images/section5_image3.jpg" alt="Civil War Era Invisible Ink" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section5_image3.jpeg" alt="Civil War Era Invisible Ink">
+        </div>
         <p>
           <strong>Invisible Ink:</strong> Lemon juice or mild acids to write between 
           lines, revealed by heat.
@@ -316,7 +336,9 @@
     <h2>7. Notable Spies and Their Strategies</h2>
     <div class="three-column-section">
       <div class="column">
-        <img src="images/section7_image1.jpg" alt="Elizabeth Van Lew" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section7_image1.jpg" alt="Elizabeth Van Lew">
+        </div>
         <p>
           <strong>Elizabeth Van Lew (Union):</strong> A Richmond socialite who ran 
           a major spy ring beneath Confederate noses by enlisting a network of 
@@ -324,7 +346,9 @@
         </p>
       </div>
       <div class="column">
-        <img src="images/section7_image2.jpg" alt="Pauline Cushman" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section7_image2.jpg" alt="Pauline Cushman">
+        </div>
         <p>
           <strong>Pauline Cushman (Union):</strong> An actress turned spy, she 
           feigned Confederate support while relaying vital intelligence to 
@@ -332,7 +356,9 @@
         </p>
       </div>
       <div class="column">
-        <img src="images/section7_image3.jpg" alt="Belle Boyd" class="image-placeholder">
+        <div class="image-container">
+          <img src="images/section7_image3.jpg" alt="Belle Boyd">
+        </div>
         <p>
           <strong>Belle Boyd (Confederate):</strong> Dubbed the "Cleopatra of 
           the Secession," she used her charm to extract secrets from Union officers.
